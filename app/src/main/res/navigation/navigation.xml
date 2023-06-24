@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/titleFragment">
+
+    <fragment
+        android:id="@+id/titleFragment"
+        android:name="com.example.aboutme.TitleFragment"
+        android:label="fragment_title"
+        tools:layout="@layout/fragment_title" >
+        <action
+            android:id="@+id/action_titleFragment_to_gameFragment"
+            app:destination="@id/gameFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameFragment"
+        android:name="com.example.aboutme.GameFragment"
+        android:label="fragment_game"
+        tools:layout="@layout/fragment_game" >
+        <action
+            android:id="@+id/action_gameFragment_to_trueFragment"
+            app:destination="@id/trueFragment" />
+        <action
+            android:id="@+id/action_gameFragment_to_falseFragment"
+            app:destination="@id/falseFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/trueFragment"
+        android:name="com.example.aboutme.TrueFragment"
+        android:label="fragment_true"
+        tools:layout="@layout/fragment_true" >
+        <action
+            android:id="@+id/action_trueFragment_to_gameFragment"
+            app:destination="@id/gameFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/falseFragment"
+        android:name="com.example.aboutme.FalseFragment"
+        android:label="fragment_false"
+        tools:layout="@layout/fragment_false" >
+        <action
+            android:id="@+id/action_falseFragment_to_gameFragment"
+            app:destination="@id/gameFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.example.aboutme.AboutFragment"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about" />
+</navigation>
